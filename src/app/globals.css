@@ -1,0 +1,8 @@
+/* globals.css বা layout.js এর ভিতরে */
+@font-face {
+  font-family: 'Bornomala';
+  src: url('/fonts/Bornomala.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
