@@ -9,58 +9,67 @@ import { Colors } from '@/common/constants';
 import AppContext from '@/common/context';
 import Timer from '@/common/timer';
 
-function useGraphControls(config, props) {
+function useGraphControls(config = {}, props = {}) {
   const { isDirGraph, playStatus, setContext } = useContext(AppContext);
-  const { source, weighted, directed } = config;
+  const { source = 'A', weighted = false, directed = false } = config;
 
+  // Validate before starting
   const validate = () => {
-    let np = Graph.totalPoints();
-    let char = String.fromCharCode(64 + np);
+    const np = Graph.totalPoints();
+    const maxChar = String.fromCharCode(64 + np);
     let message = '';
-    if (np <= 1) {
-      message = 'Graph cannot be empty.';
-    } else if (source < 'A' || source > char) {
-      message = 'Please enter a valid source.';
-    } else if (!Graph.isConnected()) {
-      message = 'Please draw connected graph.';
-    }
+
+    if (np <= 1) message = 'Graph cannot be empty.';
+    else if (source < 'A' || source > maxChar) message = 'Please enter a valid source.';
+    else if (!Graph.isConnected()) message = 'Please draw connected graph.';
+
     if (message) {
       showToast({ message, variant: 'error' });
       return false;
     }
+
     return true;
   };
 
+  // Play or resume the graph algorithm
   const handlePlay = async () => {
-    switch (playStatus) {
-      case 0:
-        if (validate()) {
-          $('#plane').off();
+    try {
+      const plane = $('#plane');
+      const vertices = $('.vrtx');
+
+      switch (playStatus) {
+        case 0:
+          if (!validate()) return;
+          plane.off();
           setContext({ playStatus: 1 });
           await props.onStart(source.charCodeAt(0) - 65);
           setContext({ playStatus: -2 });
-        }
-        break;
-      case -1:
-        setContext({ playStatus: 1 });
-        Timer.resume();
-        break;
-      case -2:
-        props.onClear?.();
-        $('.vrtx').attr('stroke', Colors.stroke);
-        $('.vrtx').attr('fill', Colors.vertex);
-        Path('.edge').attr('stroke', Colors.stroke);
-        setContext({ playStatus: 1 });
-        await Timer.sleep(1000);
-        await props.onStart(source.charCodeAt(0) - 65);
-        setContext({ playStatus: -2 });
-        break;
-      default:
-        setContext({ playStatus: -1 });
-        Timer.pause();
+          break;
+
+        case -1: // paused
+          setContext({ playStatus: 1 });
+          Timer.resume();
+          break;
+
+        case -2: // finished
+          resetGraph(vertices);
+          setContext({ playStatus: 1 });
+          await Timer.sleep(1000);
+          await props.onStart(source.charCodeAt(0) - 65);
+          setContext({ playStatus: -2 });
+          break;
+
+        default: // running
+          setContext({ playStatus: -1 });
+          Timer.pause();
+          break;
+      }
+    } catch (err) {
+      console.error('Error in handlePlay:', err);
     }
   };
 
+  // Clear the graph and redraw
   const handleClear = () => {
     props.onClear?.();
     clearGraph();
@@ -68,21 +77,38 @@ function useGraphControls(config, props) {
     setContext({ playStatus: 0 });
   };
 
+  // Toggle directed graph
   const setDirected = () => {
     refresh();
     switchGraph();
     setContext({ isDirGraph: !isDirGraph });
   };
 
+  // Refresh the graph with random generation
   const refresh = () => {
     props.onClear?.();
     clearGraph();
-    do Graph.initialize(randomGraph(5));
-    while (Graph.hasCycle());
-    createGraph(Graph.skeleton(), weighted);
+
+    // Generate random graph until no cycles
+    let skeleton;
+    do {
+      Graph.initialize(randomGraph(5));
+    } while (Graph.hasCycle());
+
+    skeleton = Graph.skeleton();
+    createGraph(skeleton, weighted);
+
     drawGraph(config);
+
     if (directed) switchGraph();
     setContext({ playStatus: 0 });
+  };
+
+  // Reset vertices colors and edges
+  const resetGraph = (vertices) => {
+    props.onClear?.();
+    vertices.attr('stroke', Colors.stroke).attr('fill', Colors.vertex);
+    Path('.edge').attr('stroke', Colors.stroke);
   };
 
   return { handlePlay, handleClear, refresh, setDirected };

@@ -1,23 +1,29 @@
+import React from 'react';
 import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/router';
 import { getAlgorithmSEO } from './config';
 import { algorithms } from '@/common/appData';
 
+// Base URL সেট করা হলো। চাহিদা অনুযায়ী পরিবর্তন করতে পারো।
+const BASE_URL = 'https://rucsehub.netlify.app';
+
 const AlgorithmSEO = ({ children, algorithmId, customSEO = {} }) => {
   const router = useRouter();
   const algorithmSEO = getAlgorithmSEO(algorithmId);
+
   const title = algorithmSEO.title;
   const { name: algoName, category } =
     algorithms.findObj('id', algorithmId) || {};
 
+  // SEO Configuration
   const seoConfig = {
     title: customSEO.title || title,
     description: customSEO.description || algorithmSEO.description,
-    canonical: `https://see-algorithms.com${router.asPath}`,
+    canonical: `${BASE_URL}${router.asPath}`,
     openGraph: {
       title: customSEO.title || title,
       description: customSEO.description || algorithmSEO.description,
-      url: `https://see-algorithms.com${router.asPath}`,
+      url: `${BASE_URL}${router.asPath}`,
       type: 'article',
     },
     additionalMetaTags: [
@@ -36,7 +42,7 @@ const AlgorithmSEO = ({ children, algorithmId, customSEO = {} }) => {
     ],
   };
 
-  // Structured Data for Algorithm
+  // Structured Data (JSON-LD)
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'LearningResource',
@@ -46,11 +52,11 @@ const AlgorithmSEO = ({ children, algorithmId, customSEO = {} }) => {
     learningResourceType: 'Interactive Visualization',
     educationalUse: ['learning', 'demonstration'],
     teaches: algoName,
-    url: `https://see-algorithms.com${router.asPath}`,
+    url: `${BASE_URL}${router.asPath}`,
     provider: {
       '@type': 'Organization',
       name: 'See Algorithms',
-      sameAs: 'https://see-algorithms.com',
+      sameAs: BASE_URL,
     },
     audience: {
       '@type': 'EducationalAudience',
@@ -60,7 +66,7 @@ const AlgorithmSEO = ({ children, algorithmId, customSEO = {} }) => {
     isPartOf: {
       '@type': 'WebSite',
       name: 'See Algorithms',
-      url: 'https://see-algorithms.com',
+      url: BASE_URL,
     },
   };
 

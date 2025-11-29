@@ -1,19 +1,21 @@
+// seoConfig.js
+
 export const defaultSeoConfig = {
-  title: 'See Algorithms - Interactive Algorithm Visualizations',
+  title: 'See Algorithms - অ্যালগরিদম ভিজ্যুয়ালাইজেশন',
   description:
-    'Learn algorithms through interactive visualizations. Step-by-step animations for sorting, searching, graph algorithms, and data structures. Perfect for students and educators.',
-  canonical: 'https://see-algorithms.com',
+    'ইন্টারেক্টিভ ভিজ্যুয়ালাইজেশন সহ অ্যালগরিদম শিখুন। ধাপে ধাপে sorting, searching, graph algorithms এবং data structures বোঝার জন্য। ছাত্র ও শিক্ষকদের জন্য আদর্শ।',
+  canonical: '', // Netlify URL যেমন: 'https://rucsehub.netlify.app'
   openGraph: {
     type: 'website',
-    locale: 'en_US',
-    url: 'https://see-algorithms.com',
+    locale: 'bn_BD',
+    url: '', // Netlify URL
     siteName: 'See Algorithms',
     title: 'See Algorithms - Interactive Algorithm Visualizations',
     description:
-      'Learn algorithms through interactive visualizations. Step-by-step animations for sorting, searching, graph algorithms, and data structures.',
+      'ইন্টারেক্টিভ ভিজ্যুয়ালাইজেশন সহ অ্যালগরিদম শিখুন। ধাপে ধাপে sorting, searching, graph algorithms এবং data structures বোঝার জন্য।',
     images: [
       {
-        url: 'https://see-algorithms.com/og-image.png', // Replace with your actual OG image URL
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'See Algorithms Visualization',
@@ -24,15 +26,11 @@ export const defaultSeoConfig = {
     {
       name: 'keywords',
       content:
-        'algorithms, visualization, sorting, data structures, computer science, programming, education, interactive learning, bubble sort, quick sort, merge sort, binary search tree, graph algorithms',
+        'algorithms, অ্যালগরিদম, visualization, sorting, data structures, কম্পিউটার সায়েন্স, programming, education, interactive learning',
     },
     {
       name: 'author',
       content: 'See Algorithms',
-    },
-    {
-      property: 'article:author',
-      content: 'https://see-algorithms.com/about',
     },
     {
       name: 'robots',
@@ -55,150 +53,73 @@ export const defaultSeoConfig = {
   ],
 };
 
+// === algorithm SEO map ===
 export const algorithmSeoMap = {
   BubbleSort: {
-    title: 'Bubble Sort Visualization - See Algorithms',
+    title: 'বাবল সর্ট (Bubble Sort) ভিজ্যুয়ালাইজেশন',
     description:
-      'Learn Bubble Sort with interactive step-by-step visualization. Understand how this simple sorting algorithm works through animated examples.',
-    keywords:
-      'bubble sort, sorting algorithm, visualization, animation, algorithm learning, O(n²) complexity',
+      'ইন্টারেক্টিভ ধাপে ধাপে বাবল সর্ট অ্যালগরিদম শিখুন। দেখুন কিভাবে সহজ comparison-based sorting কাজ করে।',
+    keywords: 'বাবল সর্ট, bubble sort, sorting algorithm, visualization, অ্যালগরিদম শেখা, O(n²)',
   },
   QuickSort: {
-    title: 'Quick Sort Visualization - See Algorithms',
+    title: 'কুইক সর্ট (Quick Sort) ভিজ্যুয়ালাইজেশন',
     description:
-      'Master Quick Sort with interactive visualization. Learn the divide-and-conquer sorting algorithm with step-by-step animations.',
-    keywords:
-      'quick sort, quicksort, sorting algorithm, divide conquer, visualization, O(n log n)',
+      'ধাপে ধাপে কুইক সর্ট শিখুন। divide-and-conquer sorting অ্যালগরিদম বোঝার জন্য interactive visualization।',
+    keywords: 'quick sort, কুইক সর্ট, sorting algorithm, visualization, O(n log n)',
   },
   MergeSort: {
-    title: 'Merge Sort Visualization - See Algorithms',
+    title: 'মার্জ সর্ট (Merge Sort) ভিজ্যুয়ালাইজেশন',
     description:
-      'Understand Merge Sort through interactive visualization. Learn this efficient divide-and-conquer sorting algorithm step by step.',
-    keywords:
-      'merge sort, mergesort, sorting algorithm, divide conquer, stable sort, O(n log n)',
-  },
-  HeapSort: {
-    title: 'Heap Sort Visualization - See Algorithms',
-    description:
-      'Learn Heap Sort with interactive visualization. Understand how this comparison-based sorting algorithm uses binary heap data structure.',
-    keywords:
-      'heap sort, heapsort, sorting algorithm, binary heap, visualization, O(n log n)',
-  },
-  InsertionSort: {
-    title: 'Insertion Sort Visualization - See Algorithms',
-    description:
-      'Master Insertion Sort with step-by-step visualization. Learn this simple and efficient algorithm for small datasets.',
-    keywords:
-      'insertion sort, sorting algorithm, visualization, simple sort, adaptive algorithm',
-  },
-  SelectionSort: {
-    title: 'Selection Sort Visualization - See Algorithms',
-    description:
-      'Understand Selection Sort through interactive visualization. Learn this simple comparison-based sorting algorithm.',
-    keywords:
-      'selection sort, sorting algorithm, visualization, comparison sort, simple algorithm',
-  },
-  RadixSort: {
-    title: 'Radix Sort Visualization - See Algorithms',
-    description:
-      'Learn Radix Sort with interactive visualization. Understand this non-comparison integer sorting algorithm.',
-    keywords:
-      'radix sort, sorting algorithm, non-comparison sort, integer sort, visualization',
+      'ইন্টারেক্টিভভাবে মার্জ সর্ট শিখুন। divide-and-conquer sorting অ্যালগরিদম step-by-step বুঝুন।',
+    keywords: 'merge sort, মার্জ সর্ট, sorting algorithm, visualization, O(n log n)',
   },
   BFS: {
-    title: 'Breadth-First Search (BFS) Visualization - See Algorithms',
+    title: 'ব্রেডথ-ফার্স্ট সার্চ (BFS) ভিজ্যুয়ালাইজেশন',
     description:
-      'Learn BFS algorithm with interactive graph visualization. Understand how breadth-first search explores graphs level by level.',
-    keywords:
-      'breadth first search, BFS, graph algorithm, graph traversal, visualization, shortest path',
+      'গ্রাফের স্তরভিত্তিক অনুসন্ধান শিখুন। ইন্টারেক্টিভ ভিজ্যুয়ালাইজেশন সহ BFS অ্যালগরিদম বোঝার জন্য।',
+    keywords: 'BFS, breadth first search, graph algorithm, graph traversal, visualization, গ্রাফ',
   },
   DFS: {
-    title: 'Depth-First Search (DFS) Visualization - See Algorithms',
+    title: 'ডেপথ-ফার্স্ট সার্চ (DFS) ভিজ্যুয়ালাইজেশন',
     description:
-      'Master DFS algorithm with interactive visualization. Learn how depth-first search explores graphs using stack-based approach.',
-    keywords:
-      'depth first search, DFS, graph algorithm, graph traversal, visualization, stack',
+      'স্ট্যাক ব্যবহার করে গ্রাফ traversal শিখুন। ইন্টারেক্টিভ ভিজ্যুয়ালাইজেশন সহ DFS বোঝার জন্য।',
+    keywords: 'DFS, depth first search, graph algorithm, stack, visualization, গ্রাফ',
   },
   Dijkstra: {
-    title: "Dijkstra's Visualization - See Algorithms",
+    title: "ডাইজস্ট্রা (Dijkstra) অ্যালগরিদম ভিজ্যুয়ালাইজেশন",
     description:
-      "Learn Dijkstra's shortest path algorithm with interactive visualization. Understand how to find shortest paths in weighted graphs.",
-    keywords:
-      'dijkstra algorithm, shortest path, graph algorithm, weighted graph, visualization, greedy algorithm',
+      'ওজনযুক্ত গ্রাফে shortest path খুঁজুন। ইন্টারেক্টিভভাবে ডাইজস্ট্রা অ্যালগরিদম শিখুন।',
+    keywords: 'dijkstra, ডাইজস্ট্রা, shortest path, graph algorithm, weighted graph, visualization',
   },
   TopSort: {
-    title: 'Topological Sorting Visualization - See Algorithms',
+    title: 'টপোলজিকাল সর্টিং (Topological Sorting) ভিজ্যুয়ালাইজেশন',
     description:
-      'Learn Topological Sorting with interactive visualization. Understand how to order vertices in a directed acyclic graph (DAG).',
-    keywords:
-      'topological sorting, topological ordering, DAG, directed acyclic graph, graph algorithm, visualization',
+      'DAG-এ vertices ordering শিখুন। ইন্টারেক্টিভভাবে topological sorting বোঝার জন্য।',
+    keywords: 'topological sort, টপোলজিকাল সর্ট, DAG, graph algorithm, visualization',
   },
   PrimsMST: {
-    title: "Prim's Minimum Spanning Tree - See Algorithms",
+    title: "প্রিম (Prim) MST ভিজ্যুয়ালাইজেশন",
     description:
-      "Master Prim's algorithm for finding minimum spanning trees with interactive visualization. Learn this greedy MST algorithm step by step.",
-    keywords:
-      'prims algorithm, minimum spanning tree, MST, graph algorithm, greedy algorithm, visualization',
-  },
-  Hamiltonian: {
-    title: 'Hamiltonian Path Visualization - See Algorithms',
-    description:
-      'Learn Hamiltonian path finding with interactive visualization. Understand how to find paths that visit every vertex exactly once.',
-    keywords:
-      'hamiltonian path, hamiltonian cycle, graph traversal, backtracking, graph algorithm, visualization',
+      'ইন্টারেক্টিভভাবে প্রিম অ্যালগরিদম শিখুন। minimum spanning tree step-by-step বোঝার জন্য।',
+    keywords: 'Prim, MST, minimum spanning tree, graph algorithm, visualization, greedy algorithm',
   },
   KruskalsMST: {
-    title: "Kruskal's Minimum Spanning Tree - See Algorithms",
+    title: "ক্রাস্কাল (Kruskal) MST ভিজ্যুয়ালাইজেশন",
     description:
-      "Learn Kruskal's algorithm for minimum spanning trees with interactive visualization. Master this union-find based MST algorithm.",
-    keywords:
-      'kruskals algorithm, minimum spanning tree, MST, union find, graph algorithm, visualization',
-  },
-  BST: {
-    title: 'Binary Search Tree (BST) Visualization - See Algorithms',
-    description:
-      'Learn Binary Search Tree data structure with interactive visualization. Understand BST operations: insert, delete, search.',
-    keywords:
-      'binary search tree, BST, data structure, tree visualization, search, insert, delete',
-  },
-  BinaryHeap: {
-    title: 'Binary Heap Visualization - See Algorithms',
-    description:
-      'Master Binary Heap with interactive visualization. Learn heap operations and understand min-heap and max-heap properties.',
-    keywords:
-      'binary heap, heap data structure, priority queue, heap operations, visualization',
-  },
-  CircularQueue: {
-    title: 'Circular Queue Visualization - See Algorithms',
-    description:
-      'Learn Circular Queue data structure with interactive visualization. Understand FIFO operations with efficient space utilization.',
-    keywords:
-      'circular queue, queue data structure, FIFO, enqueue, dequeue, ring buffer, visualization',
-  },
-  ConvexHull: {
-    title: 'Convex Hull Visualization - See Algorithms',
-    description:
-      'Learn Convex Hull algorithms with interactive visualization. Understand how to find the smallest convex polygon containing all points.',
-    keywords:
-      'convex hull, computational geometry, graham scan, jarvis march, polygon, visualization',
-  },
-  HuffmanCoding: {
-    title: 'Huffman Coding Visualization - See Algorithms',
-    description:
-      'Master Huffman Coding with interactive visualization. Learn this optimal prefix-free encoding algorithm for data compression.',
-    keywords:
-      'huffman coding, data compression, binary tree, prefix codes, encoding, algorithm visualization',
+      'ইন্টারেক্টিভভাবে ক্রাস্কাল অ্যালগরিদম শিখুন। union-find based MST step-by-step বোঝার জন্য।',
+    keywords: 'Kruskal, MST, minimum spanning tree, union find, graph algorithm, visualization',
   },
 };
 
+// === getAlgorithmSEO function ===
 export const getAlgorithmSEO = (algorithm) => {
   const algorithmSEO = algorithmSeoMap[algorithm];
   if (!algorithmSEO) {
     const algoName = algorithm.replace(/([A-Z])/g, ' $1').trim();
     return {
       title: `${algoName} - See Algorithms`,
-      description: `Learn ${algoName} algorithm with interactive visualization and step-by-step explanation.`,
-      keywords: `${algoName.toLowerCase()}, algorithm, visualization, computer science, programming`,
+      description: `ইন্টারেক্টিভভাবে ${algoName} অ্যালগরিদম শিখুন। Step-by-step explanation সহ।`,
+      keywords: `${algoName.toLowerCase()}, algorithm, visualization, অ্যালগরিদম, কম্পিউটার সায়েন্স`,
     };
   }
   return algorithmSEO;

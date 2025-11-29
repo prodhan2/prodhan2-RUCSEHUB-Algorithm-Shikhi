@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import {
   Button,
   Checkbox,
@@ -23,21 +23,23 @@ function DrawGraph(props) {
   const [source, setSource] = useState('A');
   const router = useRouter();
   const algoId = router.pathname.split('/')[2];
+
   const config = {
     source,
     weighted: props.weighted || false,
     acyclic: algoId === 'TopSort',
-    directed: algoId === 'TopSort' ||
-      (isDirGraph && props.allowDirected !== false),
+    directed: algoId === 'TopSort' || (isDirGraph && props.allowDirected !== false),
   };
-  const { handlePlay, handleClear, refresh, setDirected } =
-    useGraphControls(config, props);
 
+  const { handlePlay, handleClear, refresh, setDirected } = useGraphControls(config, props);
+
+  // Initialize graph on algo change
   useEffect(() => {
     refresh();
     return () => Timer.clear();
-  }, [algoId, router]);
+  }, [algoId, router.pathname]);
 
+  // Handle skeleton from query params
   useEffect(() => {
     const { skeleton } = router.query;
     if (skeleton) {
@@ -46,11 +48,11 @@ function DrawGraph(props) {
         const data = JSON.parse(atob(skeleton));
         Graph.initialize(data);
         createGraph(data, config.weighted);
-      } catch {
+      } catch (err) {
         handleClear();
       }
     }
-  }, [router]);
+  }, [router.query.skeleton]);
 
   const handleSave = () => {
     const data = JSON.stringify({
@@ -61,7 +63,7 @@ function DrawGraph(props) {
     const url = `${origin}${router.pathname}?skeleton=${btoa(data)}`;
     navigator.clipboard.writeText(url);
     showToast({
-      message: 'Graph url is copied to clipboard.',
+      message: 'Graph URL is copied to clipboard.',
       variant: 'success',
     });
   };
@@ -102,18 +104,13 @@ function DrawGraph(props) {
           {props.customSource !== false && (
             <TextField
               value={source}
-              onChange={(e) => {
-                let value = e.target.value;
-                setSource(value.charAt(0).toUpperCase());
-              }}
+              onChange={(e) => setSource(e.target.value.charAt(0).toUpperCase())}
               className={styles.source}
               label="Source"
               variant="outlined"
               size="small"
               sx={{ maxWidth: '80px' }}
-              InputProps={{
-                style: { fontSize: '0.9rem' },
-              }}
+              InputProps={{ style: { fontSize: '0.9rem' } }}
             />
           )}
 
@@ -124,11 +121,7 @@ function DrawGraph(props) {
             disabled={Boolean(props.isDAG && playStatus)}
             color="primary"
             aria-live="polite"
-            sx={{
-              minWidth: '80px',
-              textTransform: 'none',
-              fontWeight: 500,
-            }}
+            sx={{ minWidth: '80px', textTransform: 'none', fontWeight: 500 }}
           >
             PLAY
           </Button>
@@ -137,11 +130,7 @@ function DrawGraph(props) {
             variant="outlined"
             onClick={handleClear}
             color="primary"
-            sx={{
-              minWidth: '70px',
-              textTransform: 'none',
-              fontWeight: 500,
-            }}
+            sx={{ minWidth: '70px', textTransform: 'none', fontWeight: 500 }}
           >
             CLEAR
           </Button>
@@ -156,6 +145,7 @@ function DrawGraph(props) {
           </IconButton>
         </Box>
       </Box>
+
       <Box mb={1} className="resizable">
         <svg id="plane" className={styles.plane} role="graphics-document">
           <defs>
