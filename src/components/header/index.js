@@ -62,7 +62,7 @@ function Header(props) {
           onClick={() => router.push('/')}
           style={{ cursor: 'pointer' }}
         >
-          SEE ALGORITHMS
+          RUCSEHUB : Algorithm Shiksha
         </Typography>
       </div>
       {/* Desktop Navigation */}
