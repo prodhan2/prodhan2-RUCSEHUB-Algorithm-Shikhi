@@ -134,6 +134,7 @@ export const algorithms = [
         meta: 'Learn about Huffman Coding, a lossless compression technique that reduces file size by assigning shorter codes to frequent symbols.',
         meta_bn: 'হাফম্যান কোডিং শিখুন, একটি লসলেস কম্প্রেশন প্রযুক্তি যা ঘন ঘন প্রতীকগুলোকে ছোট কোড দেয়।',
     },
+   
 ];
 
 export const categories = groupBy(algorithms, 'category');
