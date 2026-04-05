@@ -1,0 +1,7 @@
+[build]
+  # Clean .next first so Windows/CLI builds avoid Next.js ENOENT unlink errors on stale output.
+  command = "npx rimraf .next && npm run build"
+
+# Next.js on Netlify: SSR, API routes, and ISR are handled by this plugin.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

@@ -105,7 +105,7 @@ export default function InsertionSort() {
             <>
               <strong>Insertion Sort</strong> is like organizing playing cards.
               Each new element is inserted into its correct position in the
-              sorted part. It's efficient for small datasets or partially
+              sorted part. It&apos;s efficient for small datasets or partially
               sorted lists.
             </>
           )}
