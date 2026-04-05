@@ -84,12 +84,20 @@ export default function PrimsMST(props) {
           />
 
           <p style={{ lineHeight: "1.8" }}>
-            ধরুন একটি গ্রাফ আছে যেখানে বিভিন্ন node সংযুক্ত।<br />
-            Prim&apos;s Algorithm একটি node থেকে শুরু করে সর্বনিম্ন weight
-            এর edge নির্বাচন করবে এবং নতুন node tree তে যোগ করবে।<br />
-            এভাবে যতক্ষণ না সব node যোগ হয়, tree সম্পূর্ণ হবে।<br />
-            এটি network design optimization এবং connectivity নিশ্চিত করতে
-            ব্যবহৃত হয়।
+            ধরো তুমি একটি গ্রামে বিদ্যুতের লাইন দিতে চাও।<br />
+            Prim&apos;s Algorithm একটি ঘর থেকে শুরু করে, current network-এর
+            বাইরে থাকা ঘরগুলোর মধ্যে সবচেয়ে কম খরচের সংযোগটি বেছে নেয়।<br />
+            তারপর নতুন ঘরটিকে network-এ যুক্ত করে।
+          </p>
+
+          <p style={{ lineHeight: "1.8" }}>
+            এইভাবে tree ধীরে ধীরে বড় হয়, এবং সব node যুক্ত না হওয়া পর্যন্ত
+            cheapest connector বেছে নেওয়া হয়।<br />
+            তাই পুরো network-এর মোট খরচ কম থাকে।
+          </p>
+
+          <p>
+            সহজে মনে রাখো: <strong>Start one node, grow by nearest cheap edge</strong>
           </p>
         </div>
       )}

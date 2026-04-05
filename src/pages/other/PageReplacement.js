@@ -143,10 +143,11 @@ export default function PageReplacement() {
 
   return (
     <div className="container py-3">
-      <h1 className="mb-3">Page Replacement</h1>
+      <h1 className="mb-3">OS Memory Management Simulator - Page Replacement Visualizer</h1>
       <p className="mb-4">
-        Simulate FIFO, LRU, Optimal, and Clock page replacement with a reference
-        string and a fixed number of frames.
+        Learn virtual memory behavior by simulating FIFO, LRU, Optimal, and Clock
+        page replacement algorithms with step-by-step frame transitions, victim
+        tracking, and hit-miss analytics.
       </p>
 
       <form id="simulator-form" onSubmit={handleSubmit} className="mb-4">

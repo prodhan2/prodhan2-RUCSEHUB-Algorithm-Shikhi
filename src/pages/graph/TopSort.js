@@ -95,11 +95,21 @@ export default function TopSort(props) {
           />
 
           <p style={{ lineHeight: "1.8" }}>
-            ধরুন একটি DAG আছে যেখানে বিভিন্ন কাজ একে অপরের উপর নির্ভরশীল।<br />
-            Topological Sorting নিশ্চিত করে যে কোন কাজ শুরু হবে তার নির্ভরতা অনুযায়ী।<br />
-            Kahn&apos;s Algorithm nodes এর in-degree চেক করে zero in-degree nodes আগে
-            নির্বাচন করে।<br />
-            DFS ব্যবহার করেও stack থেকে nodes pop করে ordering তৈরি করা যায়।
+            কল্পনা করো তুমি সেমিস্টারের course plan বানাচ্ছো।<br />
+            কিছু course করার আগে prerequisite course শেষ করতে হয়।<br />
+            Topological Sorting এমন order দেয়, যাতে prerequisite সবসময়
+            dependent course-এর আগে আসে।
+          </p>
+
+          <p style={{ lineHeight: "1.8" }}>
+            Kahn&apos;s method প্রথমে সেই কাজগুলো নেয় যেগুলোর in-degree (dependency)
+            শূন্য।<br />
+            একটা কাজ শেষ হলে অন্য কাজের dependency কমে, আর যেটা zero হয় সেটা
+            পরের তালিকায় আসে।
+          </p>
+
+          <p>
+            সহজে মনে রাখো: <strong>Do no-dependency tasks first</strong>
           </p>
         </div>
       )}

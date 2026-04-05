@@ -85,12 +85,19 @@ export default function KruskalsMST(props) {
           />
 
           <p style={{ lineHeight: "1.8" }}>
-            ধরুন একটি গ্রাফ আছে যেখানে বিভিন্ন node সংযুক্ত।<br />
-            Kruskal&apos;s Algorithm সমস্ত edge কে weight অনুযায়ী sort
-            করে এবং cycle তৈরি না করে tree তে যোগ করে।<br />
-            এভাবে যতক্ষণ না সব node যোগ হয়, Minimum Spanning Tree তৈরি হয়।<br />
-            Sparse network design এবং connectivity নিশ্চিত করার জন্য এটি
-            ব্যবহার হয়।
+            ধরো তুমি কয়েকটি শহরকে সবচেয়ে কম খরচে cable দিয়ে যুক্ত করতে চাও।<br />
+            Kruskal প্রথমে সব রাস্তা (edge) খরচ অনুযায়ী ছোট থেকে বড় সাজায়।<br />
+            তারপর একে একে সবচেয়ে সস্তা রাস্তা নেয়, তবে এমন রাস্তা নেয় না
+            যাতে loop/cycle তৈরি হয়।
+          </p>
+
+          <p style={{ lineHeight: "1.8" }}>
+            যতক্ষণ না সব শহর সংযুক্ত হয়, ততক্ষণ এই নির্বাচন চলতে থাকে।<br />
+            ফলে পাওয়া যায় মোট খরচে সবচেয়ে কম spanning tree (MST)।
+          </p>
+
+          <p>
+            সহজে মনে রাখো: <strong>Sort edges → pick cheapest safe edge</strong>
           </p>
         </div>
       )}

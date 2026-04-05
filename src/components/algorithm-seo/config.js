@@ -109,6 +109,12 @@ export const algorithmSeoMap = {
       'ইন্টারেক্টিভভাবে ক্রাস্কাল অ্যালগরিদম শিখুন। union-find based MST step-by-step বোঝার জন্য।',
     keywords: 'Kruskal, MST, minimum spanning tree, union find, graph algorithm, visualization',
   },
+  PageReplacement: {
+    title: 'OS Memory Management Simulator - Page Replacement Visualizer',
+    description:
+      'FIFO, LRU, Optimal এবং Clock page replacement অ্যালগরিদম ইন্টারেক্টিভভাবে সিমুলেট করুন। step-by-step frame state, hit/miss এবং victim page বিশ্লেষণ দেখুন।',
+    keywords: 'page replacement, os memory management, fifo, lru, optimal, clock algorithm, virtual memory, visualization',
+  },
 };
 
 // === getAlgorithmSEO function ===

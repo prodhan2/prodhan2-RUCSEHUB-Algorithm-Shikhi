@@ -134,6 +134,13 @@ export const algorithms = [
         meta: 'Learn about Huffman Coding, a lossless compression technique that reduces file size by assigning shorter codes to frequent symbols.',
         meta_bn: 'হাফম্যান কোডিং শিখুন, একটি লসলেস কম্প্রেশন প্রযুক্তি যা ঘন ঘন প্রতীকগুলোকে ছোট কোড দেয়।',
     },
+    {
+        id: 'PageReplacement',
+        name: 'OS Memory Management Simulator',
+        category: 'Other',
+        meta: 'Simulate FIFO, LRU, Optimal, and Clock page replacement with step-by-step memory frame visualization and hit/miss analytics.',
+        meta_bn: 'FIFO, LRU, Optimal এবং Clock page replacement অ্যালগরিদম step-by-step frame visualization ও hit/miss বিশ্লেষণসহ শিখুন।',
+    },
    
 ];
 

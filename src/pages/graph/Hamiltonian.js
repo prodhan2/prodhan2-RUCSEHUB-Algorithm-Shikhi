@@ -84,12 +84,20 @@ export default function Hamiltonian(props) {
           />
 
           <p style={{ lineHeight: "1.8" }}>
-            ধরুন কিছু শহরের মধ্যে রাস্তা আছে।<br />
-            Hamiltonian Cycle একটি route যা সব শহর ঠিক একবারে ঘুরবে এবং শুরু
-            করা শহরে ফিরে আসবে।<br />
-            এটি TSP এর মতো সমস্যা যেখানে shortest path খুঁজে বের করতে হয়।<br />
-            প্রতিটি শহর visit হলে marked হবে এবং যদি কোনো path ব্যর্থ হয়, তা revert
-            হবে।<br />
+            ধরো তুমি একটি সাইকেল রাইড প্ল্যান করছো।<br />
+            শর্ত হলো: প্রতিটি শহরে <strong>একবারই</strong> যাবে, এবং শেষে
+            আবার শুরু করা শহরে ফিরবে।<br />
+            এই নিখুঁত রাউন্ড-ট্রিপটাই Hamiltonian Cycle।
+          </p>
+
+          <p style={{ lineHeight: "1.8" }}>
+            কোনো শহর থেকে এগোনোর রাস্তা না পেলে algorithm পিছিয়ে এসে
+            (backtrack) অন্য রাস্তা চেষ্টা করে।<br />
+            তাই এটি trial-and-error style এ valid cycle খোঁজে।
+          </p>
+
+          <p>
+            সহজে মনে রাখো: <strong>Visit everyone once, then come back home</strong>
           </p>
         </div>
       )}
