@@ -6,10 +6,10 @@ export default function TermsOfServiceBangla() {
   return (
     <>
       <Head>
-        <title>সার্ভিসের শর্তাবলী - RUCSEHUB : algorithm Shikhi</title>
+        <title>সার্ভিসের শর্তাবলী - Algoshikhi</title>
         <meta
           name="description"
-          content="RUCSEHUB : algorithm Shikhi – অ্যালগরিদম শিখি প্ল্যাটফর্মের ব্যবহারের শর্তাবলী"
+          content="Algoshikhi – অ্যালগরিদম শিখি প্ল্যাটফর্মের ব্যবহারের শর্তাবলী"
         />
       </Head>
 
@@ -34,8 +34,8 @@ export default function TermsOfServiceBangla() {
         <Box sx={{ my: 3, textAlign: 'left' }}>
           <Typography variant="body1" paragraph>
             <strong>ওয়েবসাইট:</strong>{' '}
-            <Link href="https://rucsehub.netlify.app" target="_blank" rel="noopener">
-              rucsehub.netlify.app
+            <Link href="https://algoshikhi.netlify.app" target="_blank" rel="noopener">
+              algoshikhi.netlify.app
             </Link>
           </Typography>
           <Typography variant="body1" paragraph>
@@ -56,7 +56,7 @@ export default function TermsOfServiceBangla() {
 
           <Typography variant="h6" gutterBottom fontWeight={600}>১. শর্তাবলী গ্রহণ</Typography>
           <Typography variant="body1" paragraph>
-            RUCSEHUB : algorithm Shikhi ওয়েবসাইট (“সাইট”) ব্যবহার করার মাধ্যমে আপনি এই শর্তাবলীতে সম্মতি প্রদান করছেন। যদি আপনি এই শর্তাবলী মেনে নিতে না চান, তাহলে দয়া করে এই সাইট ব্যবহার করবেন না।
+            Algoshikhi ওয়েবসাইট (“সাইট”) ব্যবহার করার মাধ্যমে আপনি এই শর্তাবলীতে সম্মতি প্রদান করছেন। যদি আপনি এই শর্তাবলী মেনে নিতে না চান, তাহলে দয়া করে এই সাইট ব্যবহার করবেন না।
           </Typography>
 
           <Typography variant="h6" gutterBottom fontWeight={600}>২. ব্যবহারের লাইসেন্স</Typography>
@@ -86,7 +86,7 @@ export default function TermsOfServiceBangla() {
 
           <Typography variant="h6" gutterBottom fontWeight={600}>৫. বুদ্ধিবৃত্তিক সম্পত্তি অধিকার</Typography>
           <Typography variant="body1" paragraph>
-            সাইটের সমস্ত মৌলিক কন্টেন্ট, ফিচার ও কার্যকারিতা RUCSEHUB : algorithm Shikhi এবং তার স্রষ্টা Sujan Prodhan-এর একচেটিয়া সম্পত্তি। কপিরাইট, ট্রেডমার্ক ও অন্যান্য আইন দ্বারা এটি সুরক্ষিত।
+            সাইটের সমস্ত মৌলিক কন্টেন্ট, ফিচার ও কার্যকারিতা Algoshikhi এবং তার স্রষ্টা Sujan Prodhan-এর একচেটিয়া সম্পত্তি। কপিরাইট, ট্রেডমার্ক ও অন্যান্য আইন দ্বারা এটি সুরক্ষিত।
           </Typography>
 
           <Typography variant="h6" gutterBottom fontWeight={600}>৬. দাবিত্যাগ</Typography>
@@ -106,8 +106,8 @@ export default function TermsOfServiceBangla() {
           </Typography>
           <Typography variant="body1" paragraph>
             <strong>ওয়েবসাইট:</strong>{' '}
-            <Link href="https://rucsehub.netlify.app" target="_blank" rel="noopener">
-              rucsehub.netlify.app
+            <Link href="https://algoshikhi.netlify.app" target="_blank" rel="noopener">
+              algoshikhi.netlify.app
             </Link>
           </Typography>
           <Typography variant="body1" paragraph>

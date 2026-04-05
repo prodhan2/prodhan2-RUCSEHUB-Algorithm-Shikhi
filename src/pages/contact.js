@@ -68,10 +68,10 @@ export default function ContactUs() {
   return (
     <>
       <Head>
-        <title>Contact Us - See Algorithms</title>
+        <title>Contact Us - Algoshikhi</title>
         <meta
           name="description"
-          content="Get in touch with See Algorithms - We'd love to hear your feedback, questions, or suggestions."
+          content="Get in touch with Algoshikhi - We'd love to hear your feedback, questions, or suggestions."
         />
       </Head>
 

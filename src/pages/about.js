@@ -19,8 +19,8 @@ export default function AboutUs() {
 
   const t = {
     title: { 
-      en: 'RUCSEHUB : Algorithm Shikhi', 
-      bn: 'RUCSEHUB : অ্যালগরিদম শিখি' 
+      en: 'Algoshikhi', 
+      bn: 'Algoshikhi' 
     },
     subtitle: { 
       en: 'Making Algorithm Learning Easy with Interactive Visualizations', 

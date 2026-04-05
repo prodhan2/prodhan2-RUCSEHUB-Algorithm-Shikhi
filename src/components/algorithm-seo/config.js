@@ -1,16 +1,16 @@
 // seoConfig.js
 
 export const defaultSeoConfig = {
-  title: 'See Algorithms - অ্যালগরিদম ভিজ্যুয়ালাইজেশন',
+  title: 'Algoshikhi - অ্যালগরিদম ভিজ্যুয়ালাইজেশন',
   description:
     'ইন্টারেক্টিভ ভিজ্যুয়ালাইজেশন সহ অ্যালগরিদম শিখুন। ধাপে ধাপে sorting, searching, graph algorithms এবং data structures বোঝার জন্য। ছাত্র ও শিক্ষকদের জন্য আদর্শ।',
-  canonical: '', // Netlify URL যেমন: 'https://rucsehub.netlify.app'
+  canonical: '', // Netlify URL যেমন: 'https://algoshikhi.netlify.app'
   openGraph: {
     type: 'website',
     locale: 'bn_BD',
     url: '', // Netlify URL
-    siteName: 'See Algorithms',
-    title: 'See Algorithms - Interactive Algorithm Visualizations',
+    siteName: 'Algoshikhi',
+    title: 'Algoshikhi - Interactive Algorithm Visualizations',
     description:
       'ইন্টারেক্টিভ ভিজ্যুয়ালাইজেশন সহ অ্যালগরিদম শিখুন। ধাপে ধাপে sorting, searching, graph algorithms এবং data structures বোঝার জন্য।',
     images: [
@@ -18,7 +18,7 @@ export const defaultSeoConfig = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'See Algorithms Visualization',
+        alt: 'Algoshikhi Visualization',
       },
     ],
   },
@@ -30,7 +30,7 @@ export const defaultSeoConfig = {
     },
     {
       name: 'author',
-      content: 'See Algorithms',
+      content: 'Algoshikhi',
     },
     {
       name: 'robots',
@@ -115,6 +115,30 @@ export const algorithmSeoMap = {
       'FIFO, LRU, Optimal এবং Clock page replacement অ্যালগরিদম ইন্টারেক্টিভভাবে সিমুলেট করুন। step-by-step frame state, hit/miss এবং victim page বিশ্লেষণ দেখুন।',
     keywords: 'page replacement, os memory management, fifo, lru, optimal, clock algorithm, virtual memory, visualization',
   },
+  StackArray: {
+    title: 'Stack Array Visualizer',
+    description:
+      'Push, pop, and clear operations সহ array-based stack data structure ইন্টারেক্টিভভাবে শিখুন।',
+    keywords: 'stack, stack array, data structure, visualization, push, pop, LIFO',
+  },
+  QueueArray: {
+    title: 'Queue Array Visualizer',
+    description:
+      'FIFO queue behavior front এবং rear pointer সহ array-basedভাবে visualize করুন।',
+    keywords: 'queue, queue array, data structure, visualization, enqueue, dequeue, FIFO',
+  },
+  LinkedList: {
+    title: 'Linked List Visualizer',
+    description:
+      'Insertion, deletion, এবং node linking step-by-step দেখিয়ে linked list data structure শিখুন।',
+    keywords: 'linked list, singly linked list, data structure, visualization, insertion, deletion',
+  },
+  KMap: {
+    title: 'K-Map Visualizer',
+    description:
+      '2, 3, এবং 4-variable Karnaugh map ইন্টারেক্টিভভাবে দেখুন। minterms, dont cares, এবং Gray code order সহ animation mode ব্যবহার করুন।',
+    keywords: 'k-map, karnaugh map, boolean algebra, logic simplification, visualization, dont care, gray code',
+  },
 };
 
 // === getAlgorithmSEO function ===
@@ -123,7 +147,7 @@ export const getAlgorithmSEO = (algorithm) => {
   if (!algorithmSEO) {
     const algoName = algorithm.replace(/([A-Z])/g, ' $1').trim();
     return {
-      title: `${algoName} - See Algorithms`,
+      title: `${algoName} - Algoshikhi`,
       description: `ইন্টারেক্টিভভাবে ${algoName} অ্যালগরিদম শিখুন। Step-by-step explanation সহ।`,
       keywords: `${algoName.toLowerCase()}, algorithm, visualization, অ্যালগরিদম, কম্পিউটার সায়েন্স`,
     };

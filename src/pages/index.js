@@ -15,7 +15,7 @@ export default function HomePageBangla() {
       <Box sx={{ my: { xs: 2, md: 3 } }}>
         <Image
           src="/logo.png"
-          alt="RUCSEHUB : algorithm Shikhi"
+          alt="Algoshikhi"
           width={LOGO_WIDTH}
           height={LOGO_HEIGHT}
           priority
@@ -69,7 +69,7 @@ export default function HomePageBangla() {
         }}
       >
         সর্টিং, সার্চিং, গ্রাফ, ট্রি থেকে শুরু করে ডাইনামিক প্রোগ্রামিং পর্যন্ত — 
-        সবই <strong>RUCSEHUB : algorithm Shikhi</strong>-তে চোখের সামনে নড়াচড়া করে বোঝায়।<br /><br />
+        সবই <strong>Algoshikhi</strong>-তে চোখের সামনে নড়াচড়া করে বোঝায়।<br /><br />
         
         ছাত্র হলে পরীক্ষার আগে কনফিডেন্স বাড়বে।<br />
         শিক্ষক হলে ক্লাসে দেখিয়ে ছাত্রদের “আহা! এভাবে হয়!” বলাতে পারবেন।<br />

@@ -5,7 +5,7 @@ import { getAlgorithmSEO } from './config';
 import { algorithms } from '@/common/appData';
 
 // Base URL সেট করা হলো। চাহিদা অনুযায়ী পরিবর্তন করতে পারো।
-const BASE_URL = 'https://rucsehub.netlify.app';
+const BASE_URL = 'https://algoshikhi.netlify.app';
 
 const AlgorithmSEO = ({ children, algorithmId, customSEO = {} }) => {
   const router = useRouter();
@@ -55,7 +55,7 @@ const AlgorithmSEO = ({ children, algorithmId, customSEO = {} }) => {
     url: `${BASE_URL}${router.asPath}`,
     provider: {
       '@type': 'Organization',
-      name: 'See Algorithms',
+      name: 'Algoshikhi',
       sameAs: BASE_URL,
     },
     audience: {
@@ -65,7 +65,7 @@ const AlgorithmSEO = ({ children, algorithmId, customSEO = {} }) => {
     interactivityType: 'active',
     isPartOf: {
       '@type': 'WebSite',
-      name: 'See Algorithms',
+      name: 'Algoshikhi',
       url: BASE_URL,
     },
   };

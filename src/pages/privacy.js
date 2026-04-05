@@ -6,10 +6,10 @@ export default function PrivacyPolicyBangla() {
   return (
     <>
       <Head>
-        <title>গোপনীয়তা নীতি - RUCSEHUB : algorithm Shikhi</title>
+        <title>গোপনীয়তা নীতি - Algoshikhi</title>
         <meta
           name="description"
-          content="RUCSEHUB : algorithm Shikhi – আমরা আপনার তথ্য কীভাবে সংগ্রহ, ব্যবহার ও সুরক্ষিত রাখি"
+          content="Algoshikhi – আমরা আপনার তথ্য কীভাবে সংগ্রহ, ব্যবহার ও সুরক্ষিত রাখি"
         />
       </Head>
 
@@ -42,8 +42,8 @@ export default function PrivacyPolicyBangla() {
         <Box sx={{ mb: 5, fontSize: '1rem' }}>
           <Typography variant="body1" paragraph sx={{ m: 0 }}>
             <strong>ওয়েবসাইট:</strong>{' '}
-            <Link href="https://rucsehub.netlify.app" target="_blank" rel="noopener">
-              rucsehub.netlify.app
+            <Link href="https://algoshikhi.netlify.app" target="_blank" rel="noopener">
+              algoshikhi.netlify.app
             </Link>
           </Typography>
           <Typography variant="body1" paragraph sx={{ m: 0 }}>
@@ -64,7 +64,7 @@ export default function PrivacyPolicyBangla() {
 
           <Typography variant="h6" gutterBottom fontWeight={600}>১. ভূমিকা</Typography>
           <Typography variant="body1" paragraph>
-            RUCSEHUB : algorithm Shikhi-তে আপনাকে স্বাগতম। এই গোপনীয়তা নীতিতে বর্ণনা করা হয়েছে যে, আপনি আমাদের ওয়েবসাইট rucsehub.netlify.app ভিজিট করলে আমরা আপনার তথ্য কীভাবে সংগ্রহ, ব্যবহার ও সুরক্ষিত রাখি। দয়া করে মনোযোগ দিয়ে পড়ুন।
+            Algoshikhi-তে আপনাকে স্বাগতম। এই গোপনীয়তা নীতিতে বর্ণনা করা হয়েছে যে, আপনি আমাদের ওয়েবসাইট algoshikhi.netlify.app ভিজিট করলে আমরা আপনার তথ্য কীভাবে সংগ্রহ, ব্যবহার ও সুরক্ষিত রাখি। দয়া করে মনোযোগ দিয়ে পড়ুন।
           </Typography>
 
           <Typography variant="h6" gutterBottom fontWeight={600}>২. আমরা কী তথ্য সংগ্রহ করি</Typography>
@@ -131,8 +131,8 @@ export default function PrivacyPolicyBangla() {
           </Typography>
           <Typography variant="body1" paragraph>
             <strong>ওয়েবসাইট:</strong>{' '}
-            <Link href="https://rucsehub.netlify.app" target="_blank" rel="noopener">
-              rucsehub.netlify.app
+            <Link href="https://algoshikhi.netlify.app" target="_blank" rel="noopener">
+              algoshikhi.netlify.app
             </Link>
           </Typography>
           <Typography variant="body1" paragraph>
